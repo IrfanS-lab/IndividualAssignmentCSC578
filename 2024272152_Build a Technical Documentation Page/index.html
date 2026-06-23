@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Version Control Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <header>Git Reference Manual</header>
+        <a class="nav-link" href="#What_is_Git">What is Git</a>
+        <a class="nav-link" href="#Initializing_a_Repository">Initializing a Repository</a>
+        <a class="nav-link" href="#Staging_and_Committing">Staging and Committing</a>
+        <a class="nav-link" href="#Branching_Basics">Branching Basics</a>
+        <a class="nav-link" href="#Remote_Repositories">Remote Repositories</a>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="What_is_Git">
+            <header>What is Git</header>
+            <p>Git is a mature, actively maintained open source distributed version control system developed in 2005 by Linus Torvalds.</p>
+            <p>Unlike older centralized systems, every developer's working copy of the code is a full-fledged repository that can track changes independently.</p>
+            <code>git --version</code>
+        </section>
+
+        <section class="main-section" id="Initializing_a_Repository">
+            <header>Initializing a Repository</header>
+            <p>To begin tracking a local workspace folder with version control, change directories into your project folder and run the init command sequence.</p>
+            <p>This generates a hidden folder where Git caches all background snapshot tree changes securely.</p>
+            <code>git init</code>
+            <ul>
+                <li>Creates a hidden directory called <code>.git</code>.</li>
+                <li>Sets up a default branch, typically named <code>main</code>.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Staging_and_Committing">
+            <header>Staging and Committing</header>
+            <p>Recording adjustments happens via a two-step handshake: staging files to the index, then saving that bundle down to the timeline history record.</p>
+            <p>The staging layer lets you fine-tune exactly what modifications roll into your next snapshot release bundle.</p>
+            <code>git add index.html styles.css</code>
+            <p>Once you are satisfied with the items in your staging area, seal them permanently with a brief, clear message:</p>
+            <code>git commit -m "feat: implement initial web canvas structure"</code>
+        </section>
+
+        <section class="main-section" id="Branching_Basics">
+            <header>Branching Basics</header>
+            <p>Branching isolated pathways lets team members safely craft individual code features without fouling the primary operational trunk state.</p>
+            <p>You can seamlessly isolate experimental structures, delete broken branches, or pull verified merges back into production whenever you choose.</p>
+            <code>git checkout -b feature-navigation</code>
+            <ul>
+                <li>Isolates feature work from production routines.</li>
+                <li>Allows parallel deployment work streams.</li>
+                <li>Simplifies history pruning operations.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Remote_Repositories">
+            <header>Remote Repositories</header>
+            <p>To back up your modifications and collaborate across teams, you link your machine's workspace database tracker to a remote cloud host profile.</p>
+            <p>Common upstream host servers include platforms like GitHub, GitLab, and Bitbucket.</p>
+            <code>git push -u origin main</code>
+        </section>
+
+    </main>
+
+</body>
+</html>
